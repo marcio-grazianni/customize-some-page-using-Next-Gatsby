@@ -16,32 +16,5 @@ import LoanCardRedux from '../../containers/Crypto/LoanCard';
 import Footer from '../../containers/Crypto/Footer';
 import SideNavBar from '../../containers/Crypto/SideNavBar/Sidebar';
 
-const Dashboard = () => {
-  return (
-    <ThemeProvider theme={cryptoTheme}>
-      <Provider store={store}>
-        <Fragment>
-          <SEO title="Harris | Simple, Online, Fast" />
-          <ResetCSS />
-          <GlobalStyle />
-          <ContentWrapper>
-            <div className="flex">
-              <SideNavBar />
-              <div className="w-100">
-                <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-                  <DrawerProvider>
-                    <NavbarNoHamburger />
-                  </DrawerProvider>
-                </Sticky>
-                <LoanCardRedux />
-                <Footer />
-              </div>
-            </div>
-          </ContentWrapper>
-        </Fragment>
-      </Provider>
-    </ThemeProvider>
-  );
-};
 
 export default Dashboard;
