@@ -19,20 +19,7 @@ const ChildSupportAlimony = () => {
   return (
     <ThemeProvider theme={cryptoTheme}>
       <Provider store={store}>
-        <Fragment>
-          <SEO title="Harris | Simple, Online, Fast" />
-          <ResetCSS />
-          <GlobalStyle />
-          <ContentWrapper>
-            <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-              <DrawerProvider>
-                <NavbarNoHamburger />
-              </DrawerProvider>
-            </Sticky>
-            <BannerSectionNoWords />
-            <ChildSupportAlimonySectionRedux />
-          </ContentWrapper>
-        </Fragment>
+
       </Provider>
     </ThemeProvider>
   );
