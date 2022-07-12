@@ -15,7 +15,27 @@ import RegistrationForm from '../containers/Crypto/AntForm';
 
 const ApplicationForm = () => {
   return (
+    <ThemeProvider theme={cryptoTheme}>
+      <Provider store={store}>
+        <Fragment>
+          <SEO title="Harris | Simple, Online, Fast" />
+          <ResetCSS />
+          <GlobalStyle />
+          <ContentWrapper>
+            <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+              <DrawerProvider>
+                <Navbar />
+              </DrawerProvider>
+            </Sticky>
+            <BannerSectionNoWords />
 
+            <p></p>
+            <RegistrationForm />
+            <p></p>
+          </ContentWrapper>
+        </Fragment>
+      </Provider>
+    </ThemeProvider>
   );
 };
 
