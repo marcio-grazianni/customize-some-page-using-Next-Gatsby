@@ -16,7 +16,28 @@ import store from '../store';
 
 const App = () => {
   return (
+    <ThemeProvider theme={cryptoTheme}>
+      <Provider store={store}>
+        <Fragment>
+          <SEO title="Harris | Simple, Online, Fast" />
+          <ResetCSS />
+          <GlobalStyle />
+          <ContentWrapper>
+            <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+              <DrawerProvider>
+                <Navbar />
+              </DrawerProvider>
+            </Sticky>
+            <Banner />
+            <p>
+              <FaqSection />
+            </p>
 
+            <Footer />
+          </ContentWrapper>
+        </Fragment>
+      </Provider>
+    </ThemeProvider>
   );
 };
 
