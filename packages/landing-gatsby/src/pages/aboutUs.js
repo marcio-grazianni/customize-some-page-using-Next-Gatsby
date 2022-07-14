@@ -20,7 +20,31 @@ import AppVideo from '../containers/Crypto/AboutUsPage/MeetTheFounder';
 
 const AboutUs = () => {
   return (
-   
+       <ThemeProvider theme={cryptoTheme}>
+      <Provider store={store}>
+        <Fragment>
+          <SEO title="Harris | Simple, Online, Fast" />
+          <ResetCSS />
+          <GlobalStyle />
+          <ContentWrapper>
+            <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+              <DrawerProvider>
+                <Navbar />
+              </DrawerProvider>
+            </Sticky>
+
+            {/* <AboutUsComponent /> */}
+            <CryptoSlides />
+            <TextCenteredAboutUs />
+            <AppVideo />
+            {/* <Banner /> */}
+            {/* <BannerSectionNoWords /> */}
+
+            <Footer />
+          </ContentWrapper>
+        </Fragment>
+      </Provider>
+    </ThemeProvider>
   );
 };
 
