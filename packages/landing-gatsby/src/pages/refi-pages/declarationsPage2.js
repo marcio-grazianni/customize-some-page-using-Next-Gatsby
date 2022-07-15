@@ -18,7 +18,22 @@ import DeclarationsPage2SectionRedux from '../../containers/Crypto/DeclarationsP
 const DeclarationsPage2 = () => {
   return (
     <ThemeProvider theme={cryptoTheme}>
-
+      <Provider store={store}>
+        <Fragment>
+          <SEO title="Harris | Simple, Online, Fast" />
+          <ResetCSS />
+          <GlobalStyle />
+          <ContentWrapper>
+            <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+              <DrawerProvider>
+                <NavbarNoHamburger />
+              </DrawerProvider>
+            </Sticky>
+            <BannerSectionNoWords />
+            <DeclarationsPage2SectionRedux />
+          </ContentWrapper>
+        </Fragment>
+      </Provider>
     </ThemeProvider>
   );
 };
