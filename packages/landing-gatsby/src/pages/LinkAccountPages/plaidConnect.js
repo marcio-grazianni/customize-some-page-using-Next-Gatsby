@@ -16,7 +16,23 @@ import LinkAccount from '../../containers/Crypto/LinkAccountContainer';
 
 const LinkAccounts = () => {
   return (
-   
+       <ThemeProvider theme={cryptoTheme}>
+      <Provider store={store}>
+        <Fragment>
+          <SEO title="Harris | Simple, Online, Fast" />
+          <ResetCSS />
+          <GlobalStyle />
+          <ContentWrapper>
+            <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+              <DrawerProvider>
+                <Navbar />
+              </DrawerProvider>
+            </Sticky>
+
+            <LinkAccount />
+          </ContentWrapper>
+        </Fragment>
+      </Provider>
     </ThemeProvider>
   );
 };
